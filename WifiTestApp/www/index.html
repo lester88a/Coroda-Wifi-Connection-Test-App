@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        Customize the content security policy in the meta tag below as needed. Add 'unsafe-inline' to default-src to enable inline JavaScript.
+        For details, see http://go.microsoft.com/fwlink/?LinkID=617521
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>WifiTestApp</title>
+</head>
+<body>
+    <div class="app">
+        <h1>Wifi Connection Test</h1><br>
+        <div id="deviceready" class="blink">
+            <p class="event listening">Connecting to Device</p>
+            <p id="startsworking" class="event received">Device is Ready</p>
+        </div>
+        
+        <br><div id="myProgress">
+            <div id="myBar"></div>
+        </div>
+
+        <div>
+            <p>
+                <label>Select Testing Time</label><br>
+                <input id="10mins" type="radio" value="10" name="testTime" checked="checked"/><label>10 Minutes:</label><br>
+                <input id="30mins" type="radio" value="30" name="testTime"/><label>30 Minutes:</label><br>
+                <input id="60mins" type="radio" value="60" name="testTime"/><label>60 Minutes:</label>
+            </p>
+
+            <button id="submit" type="submit">Start</button>
+            <button id="reset" type="reset">Reset</button>
+
+        </div>
+        <div>
+            <p id="statuLogs"></p>
+        </div>
+    </div>
+    
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+</body>
+</html>
